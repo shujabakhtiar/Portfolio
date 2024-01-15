@@ -1,0 +1,236 @@
+@font-face {
+  font-family: 'FiraCode';
+  src: url('../font/FiraCode.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+h2,h4{
+  text-align: left;
+  font-family: 'FiraCode';
+}
+.App {
+  text-align: center;
+  font-family: 'FiraCode';
+  display:flex;
+  justify-content:center ;
+  height: 100%;
+  color: white;
+}
+.section{
+  width: 100%;
+  min-height: 300px;
+  max-height: 1000px;
+  margin-bottom: 50px;
+}
+.body{
+  position:relative;
+  /**background-color: #2c3036;**/
+  height: 100%;
+  width: 80%;
+  max-width: 1400px;
+}
+.home{
+  margin-top: 70px;
+}
+.flex-j-sb{
+  display: flex;
+  justify-content: space-between;
+}
+.flex{
+  display: flex;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.flex-v-sb{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.navbar{
+position: fixed;
+width: 80%;
+max-width: 1400px;
+
+top: 0%;
+left: 50%;
+height: 65px;
+transform: translate(-50%, -50%);
+display: flex;
+background-color: #black;
+padding: 32px 0px 8px 0px;
+justify-content: space-between;
+font-size: 19px;
+z-index: 1000;
+align-items: flex-end;
+color: white;
+}
+.purple{
+  color: #C778DD;
+}
+.link{
+}
+.nv-list{
+  width: 200px;
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+button{
+min-width: 110px;
+max-width: 200px;
+height: 40px;
+font-size: medium;
+padding: 8px 16px;
+align-items: flex-start;
+gap: 10px;
+border: 1px solid var(--primary, #C778DD);
+}
+
+button:hover{
+  cursor: pointer;
+  background: rgba(199, 120, 221, 0.20);
+  }
+
+.intro-heading{
+  color: var(--white, #FFF);
+  font-family: Fira Code;
+  font-size: 32px;
+  max-width: 50%;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.art1{
+ width: 40%;
+  position: relative;
+}
+.a1-a{
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+.a1-b{
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+.line{
+  
+    border-top: 2px solid #C778DD; /* Change the color and thickness as needed */
+    width: 100%;
+    min-width: 500px;
+    max-width: 700px;
+    margin: 30px 0 0 10px; /* Adjust the margin as needed */
+  
+}
+
+.cc-container{
+  width: 700px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.quote{
+  border: 1px solid var(--gray, #ABB2BF);
+  background: var(--background, #282C33);
+  height: 100px;
+  color: #FFF;
+
+font-family: 'FiraCode';
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding: 20px 30px 20px 30px;
+}
+.by{
+  width: 170px;
+  height: 65px;
+  border: 1px solid var(--gray, #ABB2BF);
+  background: var(--background, #282C33);
+  color: #FFF;
+
+font-family: 'FiraCode';
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding: 10px 15px 10px 15px;
+}
+
+.title{
+  display: flex;
+  font-size: 40px;
+  color: var(--white, #FFF);
+font-family: 'FiraCode';
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+width: 100%;
+}
+.title:hover{
+  color:#ABB2BF;
+  cursor:pointer;
+}
+.cards{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.card{
+  width: 330px;
+  max-height:450px;
+  border: 1px solid var(--gray, #ABB2BF);
+  display: flex;
+  flex-direction: column;
+}
+.card-languages{
+max-height: 72px;
+border-bottom: 1px solid var(--gray, #ABB2BF);
+display: flex;
+justify-content: center;
+padding: 5px;
+flex-direction: column;
+text-align: left;
+color: #ABB2BF;
+
+}
+.card-image{
+  height: 180px;
+  border-bottom: 1px solid var(--gray, #ABB2BF);
+
+}
+.card-details{
+  display: flex;
+  flex-direction: column ;
+  align-items: start;
+  padding: 10px;
+  justify-content: space-between;
+  height: 150px;
+}
+.gray-text{
+  color: #ABB2BF;
+
+}
+.sk-a2{
+  width: 500px;
+}
+.text{
+  max-width: 600px;
+  text-align: left;
+  margin-top: 50px;
+}
