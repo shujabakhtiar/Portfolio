@@ -10,7 +10,7 @@ export const Skills = () => {
     <div className='flex-j-sb'>
         <div><img src={design} className='sk-a2'/></div>
         <div className='sk-cards'>
-          <SmallCard title="LANGUAGES" language="python, java, html, css"/>
+          <SmallCard title="LANGUAGES" language="python, java, html, css,javascript"/>
         </div>
 
     </div>
