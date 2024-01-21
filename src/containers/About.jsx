@@ -1,26 +1,50 @@
-import React from 'react'
+import React, {useRef, useEffect, useState} from 'react'
 import { Title } from '../components/Title'
+import block from "../assets/images/a1-a.svg"
+import dots from "../assets/images/Dots.svg"
 export const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust the threshold as needed
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    // Cleanup observer on component unmount
+    return () => observer.disconnect();
+  }, []);
   return (
    
-    <div className='section'>
+<div  id= "about" ref={aboutRef} className={`section  ${isVisible ? 'visible' : ''}`} >
         <Title title="about-me" />
         <div className='flex-j-sb'>
             <div>
-                <p className='text gray-text'>
-                Hello, i’m Elias! <br/> <br/>
+                <p className='text'>
+                Hello I am Shuja B,  <br/> <br/>
 
-I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.  <br/> <br/>
-
-Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.
+              A Developer with a knack for creating awesome user experiences. Armed with a master's in Cloud Computing from Newcastle University,<br/> I thrive in both building responsive web apps using React.js/Vue.js and navigating the cloud with AWS and Azure.<br/><br/>
+  Transforming my creativity and knowledge into into captivating and efficient digital solutions is my passion. I am excited to continue this journey of digital excellence in this ever-evolving digital landscape.  
                 </p>
                 <br/>
                 <br/>
-                <button>Read More</button>
             </div>
-            <div>
-                IMAGE
-            </div>
+            <div className='art1 mobile-hide'>
+          <div className='a1-b'><img src={dots}/></div>
+          <div className='a1-a'><img src={dots}/></div>
+
+        </div>
 
         </div>
     </div>

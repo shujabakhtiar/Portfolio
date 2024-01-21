@@ -6,15 +6,22 @@ import { Skills } from '../containers/Skills.jsx'
 import { About } from '../containers/About.jsx'
 import { Contact } from '../containers/Contact.jsx'
 import {Game} from "../pages/Game.jsx"
+import { Experience } from '../containers/Experience.jsx'
 export const Home = () => {
   return (
     <div className='home'>
-        <Introbox/>
-        <Captions caption="With Great Power comes no Responsibility" by="-Bad Spidey"/>
-        <Projects/>
-        <Skills/>
-        <About/>
-        <Contact/>
+         <Introbox/>
+ <Captions caption="Innovation distinguishes between a leader and a follower" by="- Steve Jobs"/>
+          <About/>
+
+         <Experience/>
+     <Projects/>
+    <Skills/>
+        
+      
+   <Contact/>
+  
+
     </div>
   )
 }
