@@ -43,6 +43,9 @@ export const Projects = () => {
   const handleNextButtonClick = () => {
     setCurrentCardIndex((prevIndex) => (prevIndex + 1) % projectList.length);
   };
+  const handlePrevButtonClick = () => {
+    setCurrentCardIndex((prevIndex) => (prevIndex - 1 + projectList.length) % projectList.length);
+  };
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -85,7 +88,7 @@ export const Projects = () => {
       </div>
 
       <div className="next-button-container desk-hide">
-      <button className="next-button" onClick={handleNextButtonClick}>
+      <button className="next-button" onClick={handlePrevButtonClick}>
           Prev
         </button>
         <button className="next-button" onClick={handleNextButtonClick}>
