@@ -1,5 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react'
-
+import { Link  } from "react-router-dom";
+import LinkIcon from '@mui/icons-material/Link';
 
 export const FStudioz = ({Data}) => {
     const [showIntro, setShowIntro] = useState(false);
@@ -8,16 +9,14 @@ export const FStudioz = ({Data}) => {
    
   
     useEffect(() => {
-      // Scroll to the top of the page when the component mounts
       window.scrollTo(0, 0);
-  
-   
-  
-      // Cleanup the listener when the component unmounts
       return () => {
       };
     }, []); 
 
+    const redirectToExternalWebsite = (url) => {
+      window.open(url, '_blank');
+    };
 
     useEffect(() => {
       console.log("DATA: ",Data)
@@ -50,7 +49,15 @@ export const FStudioz = ({Data}) => {
   return (
  <div className={`${showIntro? 'section visible work':'section'} `}   >  
  <div className='big-title'>{Data.appName}</div><br/>
- <div className='sub-title'>{Data.appSubtitle}</div>
+ <div className='sub-title' ><>{Data.appSubtitle}</>
+  
+ {Data.liveLink?
+  <span className='trylink' onClick={()=>redirectToExternalWebsite(Data.liveLink)}><LinkIcon/>  TRY IT LIVE</span>
+  :
+  <></>
+} 
+</div>
+
  <div className='poster'>
  <img src={Data.img} className='p-img'/>
 
@@ -78,19 +85,35 @@ export const FStudioz = ({Data}) => {
       <div className='work-text1'>{Data.launchDescription}</div>
       {Data.appImg.map((image, index) => (
       <img key={index} src={image} className='p-img' alt={`Image ${index + 1}`} />
-    ))}   </div>
+    ))} 
+          <div className='work-nda'>{Data.liveEnd}</div>
+
+      </div>
     
  </div>
 
  <div   className={`section   ${isVisible ? 'visible' : ''}`} >
    <div className='data-section'>
       <div className='work-title'>The Works</div>
-      <div className='work-text1'>{Data.myRole}</div>
-      <div className='work-text1'>{Data.myRole2}</div>
-      <div className='work-text1'>{Data.myRole3}</div>
+      {Data.myRole.map((data, index) => {
+  return <div key={index} className='work-text1'> {data}</div>;
+})}
+    
+   </div>
+    
+ </div>
+ <div   className={`section   ${isVisible ? 'visible' : ''}`} >
+   <div className='data-section'>
+      <div className='work-title'>{Data.outroTitle}</div>
+      {Data.outro.map((data, index) => {
+  return <div key={index} className='work-text1'> {data}</div>;
+})}
+   
 
    </div>
     
  </div>
+ <div className='next-page'>
+ <Link to={Data.next} className='link'>  <button  onClick={() => window.scrollTo(0, 0)}>Next Project</button></Link> </div>
  </div>  )
 }

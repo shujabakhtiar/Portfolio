@@ -65,7 +65,7 @@ export const Projects = () => {
   }, []);
   return (
 <div id="project"  ref={aboutRef} className={`section  ${isVisible ? 'visible' : ''}`} >
-        <Title title="projects" link="/projects"/>
+        <Title title="projects" />
       
         <div className='cards mobile-hide'>
         <Card language="VueJs javascript html css" title="XIT Innovations" description="A Story Board application which assists users to express their ideas, and projects in a systematic way" more="/projects/f1" image={xitLogo}/>

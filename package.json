@@ -47,8 +47,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start --host 0.0.0.0"
   }
 }

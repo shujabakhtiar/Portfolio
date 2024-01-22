@@ -58,6 +58,11 @@ h2,h4{
 .home{
   margin-top: 70px;
 }
+.next-page{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
 .flex-j-sb{
   display: flex;
   justify-content: space-between;
@@ -119,10 +124,13 @@ transition: top 0.8s ease;
 }
 .link{
   text-decoration: none;
-  color: white;
+  color: #ABB2BF;
   text-decoration: none; 
   cursor: pointer;
 
+}
+.link:hover{
+  color:white
 }
 .nv-list{
   width: 550px;
@@ -244,6 +252,7 @@ li{
   display: flex;
   align-items: center ;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .title{
@@ -312,6 +321,10 @@ color: #ABB2BF;
 .sk-a2{
   width: 500px;
 }
+.logo{
+  margin-top: 30px;
+  width: 50px;
+}
 .text{
   max-width: 600px;
   text-align: left;
@@ -342,6 +355,7 @@ color: #ABB2BF;
   display: flex;
   flex-direction: column;
 align-items: flex-start;
+  transition: opacity 0.5s ease;
 }
 .p-title{
   font-size: 25px;
@@ -407,8 +421,13 @@ margin: 30px;
   padding: 15px;
 }
 .contact>div{
-  color: #ABB2BF;
+  color: #ABB2BF !important;
 }
+
+.contact>div:hover{
+  color: white !important;
+}
+
 .margin-10{
   margin: 7px;
 
@@ -438,13 +457,16 @@ margin: 30px;
   margin-top: 20px; /* Adjust the distance between the line and icons */
 }
 .icon {
- 
-  color: #fff; /* Adjust the color of the icon */
+  color: #ABB2BF; /* Adjust the color of the icon */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px; /* Adjust the distance between icons */
   margin-left: 8px;
+  cursor: pointer;
+}
+.icon:hover{
+  color:white
 }
 
 .hide{
@@ -518,12 +540,28 @@ to{border-right-color: transparent;}
   font-weight: lighter;
   padding: 30px;
   margin-bottom: 100px;
-
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  height: 220px;
+}
+.trylink{
+display: flex;
+justify-content:center ;
+align-items:center ;
+cursor: pointer;
+padding-top:30px ;
+}
+.trylink:hover{
+  color:#C778DD ;
 }
 .work{
   display: flex;
   flex-direction: column;
   align-items: start;
+  margin-top: 300px;
+
 }
 .poster{
   display: flex;
@@ -560,11 +598,18 @@ to{border-right-color: transparent;}
   text-align: left;
 
 }
+.work-nda{
+  text-align: left;
+  font-size: 12px;
+  width: 60%;
+}
 .desk-hide{
   display: none;
 }
-.work{
-  margin-top: 300px;
+.projects-title{
+  font-size: 40px;
+  color:white;
+  margin-left:100px
 }
 @media screen and (max-width: 1024px ) {
   .skill-display{
@@ -656,6 +701,7 @@ to{border-right-color: transparent;}
   }
   .work{
     margin-top: 100px;
+  
   }
   .mobile-exp{
     display: flex;
@@ -709,10 +755,26 @@ to{border-right-color: transparent;}
   display: flex;
   flex-direction: column;
 }
+.w-op{
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+.v-scroll{
+  overflow:unset;
+}
+.w-op:hover{
+  font-size: 30px;
+  margin-right: 5px;
+
+}
 .mobile-hide{
   display: none;
 }
-
+.projects-title{
+margin-left: 0;
+}
 .next-button{
   margin: 10px;
 }

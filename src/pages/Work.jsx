@@ -22,8 +22,8 @@ export const Work = () => {
     return () => clearTimeout(timer); // Clear the timer on component unmount
   }, []);
   return (
-    <div className={`${showIntro? 'section visible flex-j-sb':'section'} `}  style={{marginTop:'100px'}} >      
-    <div style={{fontSize:'40px' , color:'white',marginLeft:'100px'}}>
+    <div className={`${showIntro? 'section visible flex-j-sb mobile-exp':'section'} `}  style={{marginTop:'100px'}} >      
+    <div className='projects-title'>
       Projects 
     </div>
     <div className='flex-v-sb v-scroll'  >

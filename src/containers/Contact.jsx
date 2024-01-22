@@ -8,6 +8,29 @@ export const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const aboutRef = useRef(null);
 
+  const copyToClipboard = () => {
+    const emailToCopy = 'shujamsi22@gmail.com';
+
+    // Create a temporary textarea element
+    const tempTextArea = document.createElement('textarea');
+    tempTextArea.value = emailToCopy;
+
+    // Append the textarea element to the document
+    document.body.appendChild(tempTextArea);
+
+    // Select the textarea content
+    tempTextArea.select();
+
+    // Copy the selected content to the clipboard
+    document.execCommand('copy');
+
+    // Remove the temporary textarea element
+    document.body.removeChild(tempTextArea);
+
+    // Show an alert to notify the user
+    alert('Email copied to clipboard: ' + emailToCopy);
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -39,7 +62,7 @@ export const Contact = () => {
             <div>
                 <div className='contact'>
                   <span className="margin-10">Lets Connect Here !</span>
-                  <div className="margin-10 icon-text"><EmailIcon/> shujamsi22@gmail.com</div>
+                  <div className="margin-10 link icon-text" onClick={copyToClipboard}><EmailIcon/> shujamsi22@gmail.com</div>
                   <a href="https://www.linkedin.com/in/shuja-bakhtiar/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" className="link margin-10 icon-text"> 
                   <LinkedInIcon/> LinkedIn : Shuja Bakhtiar
 </a>

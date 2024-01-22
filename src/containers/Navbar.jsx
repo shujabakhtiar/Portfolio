@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react'
 import { Link,useLocation  } from "react-router-dom";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
+import logo from '../assets/images/logo.png'
 export const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const location = useLocation();
@@ -25,15 +25,21 @@ export const Navbar = () => {
       });
     }
   };
+
+  const redirectToExternalWebsite = (url) => {
+    window.open(url, '_blank');
+  };
+
   return (
 <>
 <div className={` mobile-hide ${showNavbar ? 'media' : 'media-hide'}`}>
       <div className="v-line"></div>
       <div className="icons-container ">
-        <GitHubIcon className='icon' fontSize="medium"/>
-   <LinkedInIcon className='icon' fontSize="medium"/>
+        <GitHubIcon onClick={()=>redirectToExternalWebsite("https://github.com/shujabakhtiar")} className='icon' fontSize="medium"/>
+   <LinkedInIcon onClick={()=>redirectToExternalWebsite("https://www.linkedin.com/in/shuja-bakhtiar/")}  className='icon'  fontSize="medium"/>
       </div>
       </div>
+     
     <div className={` ${showNavbar ? 'navbar' : 'navbar-hide'}`}>
       <Link to="/" className="link">Shuja B</Link>  
       {isWorksRoute?  <div className='flex-j-sb nv-list mobile-hide'>

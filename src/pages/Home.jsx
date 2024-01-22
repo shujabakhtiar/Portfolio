@@ -15,7 +15,7 @@ export const Home = () => {
           <About/>
 
          <Experience/>
-     <Projects/>
+     <Projects link="/projects"/>
     <Skills/>
         
       
