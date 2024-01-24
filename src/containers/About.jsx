@@ -34,8 +34,8 @@ export const About = () => {
                 <p className='text'>
                 Hello I am Shuja B,  <br/> <br/>
 
-              A Developer with a knack for creating awesome user experiences. Armed with a master's in Cloud Computing from Newcastle University,<br/> I thrive in both building responsive web apps using React.js/Vue.js and navigating the cloud with AWS and Azure.<br/><br/>
-  Transforming my creativity and knowledge into into captivating and efficient digital solutions is my passion. I am excited to continue this journey of digital excellence in this ever-evolving digital landscape.  
+              A Developer with a knack for creating awesome user experiences. Armed with a master's in Cloud Computing from Newcastle University,<br/> I thrive in both building responsive web apps using <span className='highlight'>React.js/Vue.js </span>and navigating the cloud with <span className='highlight'>AWS and Azure.</span><br/><br/>
+  Transforming my creativity and knowledge into captivating and efficient digital solutions is my passion. I am excited to continue this journey of digital excellence in this ever-evolving digital landscape.  
                 </p>
                 <br/>
                 <br/>

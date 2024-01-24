@@ -28,11 +28,11 @@ export const Introbox = () => {
   };
   
   return (
-    <div id="Introbox" className={`${showIntro? 'section visible flex-j-sb':'section'} `}  style={{height:'100vh', alignItems:'center'}}>
+    <div id="Introbox" className={`${showIntro? 'section visible flex-j-sb':'section'} `} >
         <div className='intro-heading'>
            <div className='flex-v-sb'>
               <h2> Shuja Bakhtiar,<br/> <span className='typing'> Developer</span></h2>
-               <h4 className='gray-text'>He crafts responsive websites where technologies meet creativity</h4>
+               <h4 className='gray-text'>Crafting complete engineering solutions for online excellence.</h4>
                <button onClick={() => scrollToSection('contact')}>Contact Me !!</button>
            </div>
         </div>

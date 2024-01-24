@@ -26,7 +26,7 @@ export const Captions = ({caption,by}) => {
   }, []);
 
   return (
-    <div ref={aboutRef} className={`section center ${isVisible ? 'visible' : ''}`}>
+    <div ref={aboutRef} className={`section cc ${isVisible ? 'visible' : ''}`}>
         <div className='cc-container'>
             <div className='quote center'>
                {caption}
