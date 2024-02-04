@@ -2,11 +2,14 @@ import React, {useState,useEffect} from 'react'
 import { Link,useLocation  } from "react-router-dom";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import logo from '../assets/images/logo.png'
+import MenuIcon from '@mui/icons-material/Menu';
+
 export const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const location = useLocation();
   const isWorksRoute = location.pathname === '/';
+  const [drawer,setDrawer]=useState(false);
+
   useEffect(() => {
     // Simulate delay for the Navbar (adjust the delay time as needed)
     const timer = setTimeout(() => {
@@ -30,6 +33,11 @@ export const Navbar = () => {
     window.open(url, '_blank');
   };
 
+ const  toggleDrawer=()=>{
+    setDrawer(!drawer);
+    document.body.style.overflow = drawer ? 'auto' : 'hidden';
+  };
+
   return (
 <>
 <div className={` mobile-hide ${showNavbar ? 'media' : 'media-hide'}`}>
@@ -39,10 +47,18 @@ export const Navbar = () => {
    <LinkedInIcon onClick={()=>redirectToExternalWebsite("https://www.linkedin.com/in/shuja-bakhtiar/")}  className='icon'  fontSize="medium"/>
       </div>
       </div>
+
+      
      
     <div className={` ${showNavbar ? 'navbar' : 'navbar-hide'}`}>
+      <span className='desk-hide'></span>
       <Link to="/" className="link">Shuja B</Link>  
-      {isWorksRoute?  <div className='flex-j-sb nv-list mobile-hide'>
+
+      <span className='burger-icon desk-hide'>
+      <MenuIcon onClick={()=>{toggleDrawer()}}/>
+      </span>
+    
+      {isWorksRoute?  <div  onClick={()=>{toggleDrawer()}} className={`flex-j-sb nv-list ${drawer ? 'drawer-open' : 'drawer-close'}`}>
        
        <div className="link " onClick={() => scrollToSection('about')}>
             <span className='purple'>#</span>about-me

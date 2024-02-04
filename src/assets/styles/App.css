@@ -691,16 +691,19 @@ padding-top:30px ;
     transform: translate(-50%, -50%);
     display: flex;
     background-color: black;
-    padding: 32px 0px 8px 0px;
-    justify-content: center;
+    padding: 32px 20px 8px 0px;
+    justify-content: space-between;
     font-size: 19px;
     z-index: 1000;
     align-items: flex-end;
     color: white;
     transition: top 0.8s ease;
   }
+ 
   #introbox{
     width: 100%;
+    top: 0%;
+    left: 100%;
   }
   .section{
     width: 100% !important;
@@ -824,5 +827,45 @@ margin-left: 0;
 }
 #Introbox{
   height: 90vh;
+}
+.drawer-open {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color:black;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: right .5s cubic-bezier(0.820, 0.085, 0.395, 0.895);  transform: translateX(0);
+
+}
+
+.drawer-close {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1001;
+  background-color: black;
+  top: 0;
+  right: -100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: right .5s cubic-bezier(0.820, 0.085, 0.395, 0.895);  transform: translateX(0);
+}
+
+.drawer-open > div{
+  font-size: 37px;
+  margin: 40px 20px 0px 20px;
+
+}
+.drawer-close > div{
+  font-size: 37px;
+  margin: 40px 20px 0px 20px;
+
 }
 }
